@@ -1,0 +1,28 @@
+<form>
+        
+<div>
+
+<h1>3DLOOK</h1>
+
+<label for="title">
+title
+</label>
+
+<input type="text" #newTodo>
+
+<label for="text">
+text
+</label>
+
+<input type="text" #newTodoTwo>
+
+</div>
+  
+<div class="showblock" *ngFor="let todo of todos">
+<span>{{todo.value}}</span>
+<button class="btn" (click)="deleteTodo(value)">delete</button>
+</div>
+
+<button class="button" (click)="addTodo(newTodo.value); addTodoTwo(newTodoTwo.value)">Add Todo</button>
+  
+</form>
